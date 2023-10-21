@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIBRARY</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #707070;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .book-container {
+            display: flex;
+            gap: 20px;
+            height: 50%;
+            margin-top: -3REM;
+        }
+
+        .book {
+            border: 1px solid #cccccc00;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .book:hover {
+            transform: scale(1.1);
+        }
+
+        .book img {
+            max-width: 300px;
+            min-width: 300px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        /* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas
+ */
+/* Exo thin font from Google. */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */
+body {
+
+  color: #999;
+  height: 100vh !important;
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: center;
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 0.92s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+body::before {
+  content: ;
+  font-size: 8rem;
+  font-weight: 100;
+  font-style: normal;
+}
+@media only screen and (max-width: 600px) {
+  body, .book-container {
+   display: inline-block;
+   margin:7REM auto;
+   align-items: center;
+   justify-content: center;
+   padding-left: 5%;
+   
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="book-container">
+        <div class="book" onclick="downloadBook('HowToReadAPersonLikeABook.pdf')">
+            <img src="./howtoreadpersonl00gera_0.jpg" alt="Book 1">
+ 
+        </div>
+        <div class="book" onclick="downloadBook('robert-kiyosaki-the-real-book-of-real-estate.pdf')">
+            <img src="./realbook.jpg" alt="Book 2">
+       
+        </div>
+        <div class="book" onclick="downloadBook('Ultralearning_Master_Hard_Skills.pdf')">
+            <img src="./ultra.jpg" alt="Book 2">
+ 
+        </div>
+        <!-- Add more books as needed -->
+    </div>
+    <script>
+        function downloadBook(bookName) {
+            window.location.href = bookName;
+        }
+    </script>
+</body>
+</html>
