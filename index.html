@@ -18,6 +18,8 @@
 
         .book-container {
             display: flex;
+            flex-wrap: wrap;
+            width: 100vw;
             gap: 20px;
             height: 50%;
             margin-top: -3REM;
@@ -38,7 +40,7 @@
         .book img {
             max-width: 300px;
             min-width: 300px;
-            height: auto;
+            height: 450px;
             margin-bottom: 10px;
         }
         /* Cool infinite background scrolling animation.
@@ -142,6 +144,22 @@ body::before {
             <img src="./ultra.jpg" alt="Book 2">
  
         </div>
+        <div class="book" onclick="downloadBook('daniel-goleman-emotional-intelligence.pdf')">
+          <img src="./EQ.jpg" alt="Book 2">
+
+      </div>
+      <div class="book" onclick="downloadBook('The Subtle Art of Not Giving a Fck A Counterintuitive Approach to Living a Good Life by Mark Manson (z-lib.org).pdf')">
+        <img src="./subtle.jpg" alt="Book 2">
+
+    </div>
+    <div class="book" onclick="downloadBook('The Psychology of Money.pdf')">
+      <img src="./PSOM.jpg" alt="Book 2">
+
+  </div>
+  <div class="book" onclick="downloadBook('The Personal MBA.pdf')">
+    <img src="./PMBA.jpg" alt="Book 2">
+
+</div>
         <!-- Add more books as needed -->
     </div>
     <script>
